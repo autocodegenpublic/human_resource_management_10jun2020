@@ -1,0 +1,305 @@
+
+
+
+{
+    "autocodegen": "1.0",
+    "info": {
+        "title": "human_resource_management_eventbrite",
+        "description": "This is a simple example NodeJS API project to demonstrate AutoCodeGen Documentation",
+        "version": "1.0.0",
+        "contact": {
+            "email": "abc@autocodegen.com"
+        }
+    },
+    "schemes": ["http"],
+    "host": "http://localhost:8080",
+    "baseRoute": "/",
+     "routes" : [
+             {
+        "routeName" : "/human_resource_manager/post_human_resource_manager_data",
+        "method" : "post",    
+        "description": "post_human_resource_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                      "unique_employee_id" : "<String>"           
+     ,
+          "employee_name" : "<String>"           
+     ,
+          "employee_geneder" : "<String>"           
+     ,
+          "employee_expertise" : "<String>"           
+     ,
+          "other_employee_information" : "<{}>"           
+                 }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/human_resource_manager/get_one_human_resource_manager_data",
+        "method" : "get",    
+        "description": "get_one_human_resource_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+     "unique_employee_id" : "req.query.unique_employee_id"        }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_employee_id" : "<String>",                      "employee_name" : "<String>",                      "employee_geneder" : "<String>",                      "employee_expertise" : "<String>",                      "other_employee_information" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/human_resource_manager/get_all_human_resource_manager_data",
+        "method" : "get",    
+        "description": "get_all_human_resource_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_employee_id" : "<String>",                      "employee_name" : "<String>",                      "employee_geneder" : "<String>",                      "employee_expertise" : "<String>",                      "other_employee_information" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/human_resource_manager/update_one_human_resource_manager_data",
+        "method" : "patch",    
+        "description": "human_resource_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                "unique_employee_id" : "req.query.unique_employee_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                "employee_name" :  "<String>",                "employee_geneder" :  "<String>",                "employee_expertise" :  "<String>",                "other_employee_information" :  "<{}>"                    }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/human_resource_manager/delete_one_human_resource_manager_data",
+        "method" : "delete",    
+        "description": "delete_one_human_resource_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+               "unique_employee_id" : "req.query.unique_employee_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+         
+
+
+     ]
+
+
+
+,
+ "customRoutes" : [
+                   {
+        "routeName" : "/human_resource_manager/get_one_employee_expertise_by_unique_employee_id",
+        "method" : "get",    
+        "description": "get_one_employee_expertise_by_unique_employee_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_employee_id" : "req.query.unique_employee_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "employee_expertise" : "employee_expertise_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+       ,{
+        "routeName" : "/human_resource_manager/update_one_other_employee_information_by_unique_employee_id",
+        "method" : "patch",    
+        "description": "update_one_other_employee_information_by_unique_employee_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_employee_id" : "req.query.unique_employee_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "other_employee_information" : "other_employee_information_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+   ,{
+        "routeName" : "/human_resource_manager/get_count_of_employee_geneder",
+        "method" : "get",    
+        "description": "get_count_of_employee_geneder",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "employee_geneder" : "req.query.unique_employee_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" : {"<Response>" : "Number"}
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+  
+ ]
+        
+ }
